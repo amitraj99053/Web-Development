@@ -58,17 +58,19 @@ console.log("!(g < h) ", !(g < h)); // not opr
 
 // conditional statement
 
-let mode = "dark";
+let mode = "silver";
 let color;
 // colour check
 if (mode === "dark") {
     color = "black";
-}
-
-if (mode === "light") {
+} else if (mode === "blue") {
+    color = "blue";
+} else if (mode === "pink") {
+    color = "pink";
+} else {
     color = "white";
 }
-console.log(color);
+console.log("Color : ",color);
 
 
 // voting check
@@ -89,3 +91,51 @@ if (num % 2 == 0) {
 } else {
     console.log("Odd");
 }
+
+
+// age level
+if (age < 18) {
+    console.log("Junior");
+} else if (age > 60) {
+    console.log("Senior");
+} else {
+    console.log("Middele");
+}
+
+// ternary operator
+let resultOfAge = age > 18 ? "Adult" : "Not Adult";
+console.log(resultOfAge);
+
+age > 18 ? console.log("Adult") : console.log("Not Adult");
+
+
+// student grading based on performance
+let marks = 94;
+
+if (marks >= 90 && marks <= 100) {
+    console.log("A");
+} else if (marks >= 70 && marks <= 89) {
+    console.log("B");
+} else if (marks >= 60 && marks <= 69) {
+    console.log("C");
+} else if (marks >= 50 && marks <= 59) {
+    console.log("D");
+} else if (marks >= 0 && marks <= 49) {
+    console.log("Fail");
+} else {
+    console.log("Invalid data");
+}
+
+alert("Alert Notification"); // alert notification
+let enterNum = prompt("Enter a number : "); // alert with input function
+
+
+// check num is multiple of 5 with input
+if (enterNum % 5 == 0) {
+    console.log(enterNum, " is multiple of 5");
+} else {
+    console.log(enterNum, " is not multiple of 5");
+}
+
+
+
