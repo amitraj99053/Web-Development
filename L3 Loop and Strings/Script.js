@@ -67,11 +67,47 @@ let size = 0;
  console.log(" ");
 
 
- // Practice Qn2 
+ // Practice Qn2   game
  let gameNum = 25;
- let userGuesNum = prompt("Guess the number : ");
+ let userGuesNum = prompt("Guess the game number : ");
 
 while (userGuesNum != gameNum) { // game
-    userGuesNum = prompt("You entered wrong number, Guess again : ")
+    userGuesNum = prompt("You entered wrong number, Guess again : ");
 }
 console.log("Congratulatios, you ertered the right number ");
+
+
+
+// String in JS
+let str1 = "Amit Kumar";
+let str2 = 'Sumit Kumar';
+console.log(str1.length);  // 10
+
+let obj1 = {
+    item : "pen",
+    price : 10,
+};
+
+// template literals 
+let output = `The cost of ${obj1.item} is ${obj1.price} rupees`;
+console.log(output);
+
+
+// upper/lower case
+let uprCase = str1.toUpperCase();
+let loweCase = str1.toLowerCase();
+console.log(uprCase);
+console.log(loweCase);
+
+// trim  (remove spaces from start and end only)
+let sentance = "    I like to  learn new      skills & technology        ";
+console.log(sentance.trim());
+
+let sliNum = "0123456";
+console.log(sliNum.slice(1,6));
+
+
+// Qs1 
+let inpName = prompt("Enter your name : ");
+let userName = "@" + inpName + inpName.length;
+console.log(userName);
