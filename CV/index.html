@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .cv-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <h1 id="name"></h1>
+        <p id="contact"></p>
+
+        <h2>Education</h2>
+        <ul id="education"></ul>
+
+        <h2>Experience</h2>
+        <ul id="experience"></ul>
+
+        <h2>Skills</h2>
+        <ul id="skills"></ul>
+
+        <h2>Projects</h2>
+        <ul id="projects"></ul>
+    </div>
+
+    <script>
+        const cvData = {
+            name: "Amit Kumar",
+            contact: "📧 amit@example.com | 📞 +91-9876543210 | 🌐 linkedin.com/in/amit-kumar-654895220/",
+            education: [
+                "MCA - GL Bajaj Institute of Technology and Management, 2026",
+                "BCA - Vinoba Bhave University, 2024",
+                "Intermediate - Karanpura College Barkagaon, Hzb, 2021",
+                "Matriculation - Garrikalan High School Barkagaon Hzb 2019",
+            ],
+            experience: [
+                "Part Time - Instructor at Rovolo Group Of Companies (Jan 2024 - Present)",
+                "Intern - Web Development at ABC Technologies (Jan 2025 - May 2025)",
+                "Freelance Front-End Developer - React & JavaScript Projects"
+            ],
+            skills: [
+                "XML, Firbase, API",
+                "JavaScript, HTML, CSS",
+                "React, Node.js, MongoDB",
+                "Java, Python, Git, GitHub"
+            ], 
+            projects: [
+                "SnapChat clone - Andoid Application",
+                "News - Application Using API Integration",
+                "E-service Android Application",
+                "E-Commernce Web Page",
+                "Sportify Music Web Page",
+            ],
+        };
+
+        document.getElementById("name").textContent = cvData.name;
+        document.getElementById("contact").textContent = cvData.contact;
+
+        function populateList(id, items) {
+            const list = document.getElementById(id);
+            items.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                list.appendChild(li);
+            });
+        }
+
+        populateList("education", cvData.education);
+        populateList("experience", cvData.experience);
+        populateList("skills", cvData.skills);
+        populateList("projects",cvData.projects);
+    </script>
+</body>
+</html>
